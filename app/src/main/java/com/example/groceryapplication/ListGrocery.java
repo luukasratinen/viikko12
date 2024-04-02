@@ -2,6 +2,7 @@ package com.example.groceryapplication;
 
 import java.util.ArrayList;
 
+
 public class ListGrocery {
 
     private static ListGrocery instance;
@@ -10,8 +11,6 @@ public class ListGrocery {
     private ListGrocery() {
         groceries = new ArrayList<>();
     }
-
-
 
     public static synchronized ListGrocery getInstance() {
         if (instance == null) {
@@ -25,19 +24,16 @@ public class ListGrocery {
     }
 
     public Grocery getGroceryByName(String name) {
-
         return null;
     }
-    public void removeGrocery(String name) {
 
+    public void removeGrocery(String name) {
     }
 
     public void sortGroceriesByAlphabet() {
-
     }
 
     public void sortGroceriesByTime() {
-
     }
 
     public ArrayList<Grocery> getGroceries() {

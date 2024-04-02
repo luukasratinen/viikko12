@@ -1,6 +1,6 @@
-
 package com.example.groceryapplication;
 
+import android.content.Intent;
 import android.os.Bundle;
 import androidx.appcompat.app.AppCompatActivity;
 import android.view.View;
@@ -18,7 +18,7 @@ public class AddGroceryActivity extends AppCompatActivity {
         setContentView(R.layout.activity_add_grocery);
 
         editGroceryName = findViewById(R.id.editGroceryName);
-        editGroceryNote = findViewById(R.id.editTextGroceryNote);
+        editGroceryNote = findViewById(R.id.editGroceryNote);
         buttonAddGrocery = findViewById(R.id.buttonAddGrocery);
 
         buttonAddGrocery.setOnClickListener(new View.OnClickListener() {
