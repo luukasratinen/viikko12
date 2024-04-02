@@ -39,7 +39,6 @@ public class GroceryListAdapter extends RecyclerView.Adapter<GroceryViewHolder> 
         return groceries.size();
     }
 
-    // Lisätään updateGroceryList -metodi
     public void updateGroceryList(ArrayList<Grocery> updatedList) {
         groceries.clear();
         groceries.addAll(updatedList);
