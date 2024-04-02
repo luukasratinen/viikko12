@@ -11,6 +11,9 @@ public class ListGrocery {
         groceries = new ArrayList<>();
     }
 
+    public void removeGrocery(String name) {
+    }
+
     public static synchronized ListGrocery getInstance() {
         if (instance == null) {
             instance = new ListGrocery();
