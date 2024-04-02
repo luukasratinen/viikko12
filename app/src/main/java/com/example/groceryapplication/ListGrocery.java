@@ -11,8 +11,7 @@ public class ListGrocery {
         groceries = new ArrayList<>();
     }
 
-    public void removeGrocery(String name) {
-    }
+
 
     public static synchronized ListGrocery getInstance() {
         if (instance == null) {
@@ -26,12 +25,19 @@ public class ListGrocery {
     }
 
     public Grocery getGroceryByName(String name) {
-        for (Grocery grocery : groceries) {
-            if (grocery.getName().equals(name)) {
-                return grocery;
-            }
-        }
+
         return null;
+    }
+    public void removeGrocery(String name) {
+
+    }
+
+    public void sortGroceriesByAlphabet() {
+
+    }
+
+    public void sortGroceriesByTime() {
+
     }
 
     public ArrayList<Grocery> getGroceries() {
