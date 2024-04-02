@@ -18,7 +18,7 @@ public class AddGroceryActivity extends AppCompatActivity {
         setContentView(R.layout.activity_add_grocery);
 
         editGroceryName = findViewById(R.id.editGroceryName);
-        editGroceryNote = findViewById(R.id.editGroceryNote);
+        editGroceryNote = findViewById(R.id.editTextGroceryNote);
         buttonAddGrocery = findViewById(R.id.buttonAddGrocery);
 
         buttonAddGrocery.setOnClickListener(new View.OnClickListener() {
