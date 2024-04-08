@@ -11,45 +11,42 @@ import com.example.groceryapplication.fragments.AddGroceryFragment;
 import com.example.groceryapplication.fragments.ListGroceryFragment;
 import com.example.groceryapplication.fragments.MainPageFragment;
 
-public class MainActivity extends AppCompatActivity implements View.OnClickListener {
-
-    private Button buttonMainPage;
-    private Button buttonAddItem;
-    private Button buttonAllItems;
+public class MainActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        buttonMainPage = findViewById(R.id.MainPageFragment2);
-        buttonAddItem = findViewById(R.id.AddGroceryFragment2);
-        buttonAllItems = findViewById(R.id.ListGroceryFragment2);
+        Button fragmentA = findViewById(R.id.MainPageFragment);
+        Button fragmentB = findViewById(R.id.AddGroceryFragment);
+        Button btnTab = findViewById(R.id.ListGroceryFragment);
 
-        buttonMainPage.setOnClickListener(this);
-        buttonAddItem.setOnClickListener(this);
-        buttonAllItems.setOnClickListener(this);
+        fragmentA.setOnClickListener(listener);
+        fragmentB.setOnClickListener(listener);
+        btnTab.setOnClickListener(listener);
     }
 
-    @Override
-    public void onClick(View v) {
-        Fragment fragment;
-        int id = v.getId();
+    private View.OnClickListener listener = new View.OnClickListener() {
+        @Override
+        public void onClick(View view) {
+            Fragment fragment;
 
-        if (id == R.id.MainPageFragment2) {
-            fragment = new MainPageFragment();
-        } else if (id == R.id.AddGroceryFragment2) {
-            fragment = new AddGroceryFragment();
-        } else if (id == R.id.ListGroceryFragment2) {
-            fragment = new ListGroceryFragment();
-        } else {
-            fragment = new MainPageFragment();
+            if (view.getId() == R.id.MainPageFragment) {
+                fragment = new MainPageFragment();
+            } else if (view.getId() == R.id.AddGroceryFragment) {
+                fragment = new AddGroceryFragment();
+            } else if (view.getId() == R.id.ListGroceryFragment) {
+                fragment = new ListGroceryFragment();
+            } else {
+                fragment = new MainPageFragment();
+            }
+
+            getSupportFragmentManager().beginTransaction()
+                    .replace(R.id.frame, fragment)
+                    .commit();
         }
-
-        getSupportFragmentManager().beginTransaction()
-                .replace(R.id.frame, fragment)
-                .commit();
-    }
+    };
 
     public void addGrocery(String name, String note) {
         Grocery grocery = new Grocery(name, note);

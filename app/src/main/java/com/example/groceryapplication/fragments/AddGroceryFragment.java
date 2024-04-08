@@ -35,6 +35,8 @@ public class AddGroceryFragment extends Fragment {
                 MainActivity activity = (MainActivity) getActivity();
                 if (activity != null) {
                     activity.addGrocery(name, note);
+                    editGroceryName.getText().clear();
+                    editGroceryNote.getText().clear();
                 }
             }
         });

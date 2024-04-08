@@ -7,7 +7,7 @@
 
 
     <LinearLayout
-        android:id="@+id/r"
+        android:id="@+id/linear"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical">
