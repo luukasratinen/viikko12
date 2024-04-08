@@ -29,7 +29,6 @@ public class ListGroceryFragment extends Fragment {
         rvGroceries.setAdapter(adapter);
         rvGroceries.setLayoutManager(new LinearLayoutManager(getContext()));
 
-
         return view;
     }
 }

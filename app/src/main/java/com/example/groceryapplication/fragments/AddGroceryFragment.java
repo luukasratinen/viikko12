@@ -1,5 +1,3 @@
-
-
 package com.example.groceryapplication.fragments;
 
 import android.os.Bundle;
@@ -11,7 +9,6 @@ import com.example.groceryapplication.R;
 import android.widget.Button;
 import android.widget.EditText;
 import com.example.groceryapplication.MainActivity;
-
 
 public class AddGroceryFragment extends Fragment {
 
@@ -29,7 +26,6 @@ public class AddGroceryFragment extends Fragment {
         editGroceryNote = view.findViewById(R.id.editGroceryNote);
         buttonAddGrocery = view.findViewById(R.id.buttonAddGrocery);
 
-
         buttonAddGrocery.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -37,7 +33,9 @@ public class AddGroceryFragment extends Fragment {
                 String note = editGroceryNote.getText().toString();
 
                 MainActivity activity = (MainActivity) getActivity();
-                activity.addGrocery(name, note);
+                if (activity != null) {
+                    activity.addGrocery(name, note);
+                }
             }
         });
 

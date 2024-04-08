@@ -9,10 +9,7 @@ import com.example.groceryapplication.R;
 
 public class MainPageFragment extends Fragment {
 
-    public MainPageFragment() {
-
-
-    }
+    public MainPageFragment() {}
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
