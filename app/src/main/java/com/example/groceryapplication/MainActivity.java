@@ -1,18 +1,20 @@
 package com.example.groceryapplication;
 
 import android.os.Bundle;
-import androidx.appcompat.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
+
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.fragment.app.Fragment;
 
 import com.example.groceryapplication.fragments.AddGroceryFragment;
 import com.example.groceryapplication.fragments.ListGroceryFragment;
 import com.example.groceryapplication.fragments.MainPageFragment;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends AppCompatActivity implements View.OnClickListener {
 
-    private Button buttonAddItem;
     private Button buttonMainPage;
+    private Button buttonAddItem;
     private Button buttonAllItems;
 
     @Override
@@ -24,32 +26,29 @@ public class MainActivity extends AppCompatActivity {
         buttonAddItem = findViewById(R.id.AddGroceryFragment);
         buttonAllItems = findViewById(R.id.ListGroceryFragment);
 
-        buttonMainPage.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                getSupportFragmentManager().beginTransaction()
-                        .replace(R.id.frame, new MainPageFragment())
-                        .commit();
-            }
-        });
+        buttonMainPage.setOnClickListener(this);
+        buttonAddItem.setOnClickListener(this);
+        buttonAllItems.setOnClickListener(this);
+    }
 
-        buttonAddItem.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                getSupportFragmentManager().beginTransaction()
-                        .replace(R.id.frame, new AddGroceryFragment())
-                        .commit();
-            }
-        });
+    @Override
+    public void onClick(View v) {
+        Fragment fragment;
+        int id = v.getId();
 
-        buttonAllItems.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                getSupportFragmentManager().beginTransaction()
-                        .replace(R.id.frame, new ListGroceryFragment())
-                        .commit();
-            }
-        });
+        if (id == R.id.MainPageFragment) {
+            fragment = new MainPageFragment();
+        } else if (id == R.id.AddGroceryFragment) {
+            fragment = new AddGroceryFragment();
+        } else if (id == R.id.ListGroceryFragment) {
+            fragment = new ListGroceryFragment();
+        } else {
+            fragment = new MainPageFragment();
+        }
+
+        getSupportFragmentManager().beginTransaction()
+                .replace(R.id.frame, fragment)
+                .commit();
     }
 
     public void addGrocery(String name, String note) {
