@@ -1,6 +1,5 @@
 
 package com.example.groceryapplication.Fragments;
-
 import android.os.Bundle;
 import androidx.fragment.app.Fragment;
 import android.view.LayoutInflater;
@@ -10,7 +9,10 @@ import com.example.groceryapplication.R;
 
 public class MainPageFragment extends Fragment {
 
-    public MainPageFragment() {}
+    public MainPageFragment() {
+
+
+    }
 
 
     @Override
