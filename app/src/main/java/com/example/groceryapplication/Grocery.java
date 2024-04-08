@@ -8,6 +8,7 @@ public class Grocery {
     public Grocery(String name, String note) {
         this.name = name;
         this.note = note;
+
     }
 
     public String getName() {

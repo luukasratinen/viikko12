@@ -22,9 +22,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        buttonMainPage = findViewById(R.id.MainPageFragment);
-        buttonAddItem = findViewById(R.id.AddGroceryFragment);
-        buttonAllItems = findViewById(R.id.ListGroceryFragment);
+        buttonMainPage = findViewById(R.id.MainPageFragment2);
+        buttonAddItem = findViewById(R.id.AddGroceryFragment2);
+        buttonAllItems = findViewById(R.id.ListGroceryFragment2);
 
         buttonMainPage.setOnClickListener(this);
         buttonAddItem.setOnClickListener(this);
@@ -36,11 +36,11 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         Fragment fragment;
         int id = v.getId();
 
-        if (id == R.id.MainPageFragment) {
+        if (id == R.id.MainPageFragment2) {
             fragment = new MainPageFragment();
-        } else if (id == R.id.AddGroceryFragment) {
+        } else if (id == R.id.AddGroceryFragment2) {
             fragment = new AddGroceryFragment();
-        } else if (id == R.id.ListGroceryFragment) {
+        } else if (id == R.id.ListGroceryFragment2) {
             fragment = new ListGroceryFragment();
         } else {
             fragment = new MainPageFragment();
