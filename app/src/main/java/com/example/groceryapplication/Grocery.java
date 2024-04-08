@@ -17,4 +17,5 @@ public class Grocery {
     public String getNote() {
         return note;
     }
+
 }

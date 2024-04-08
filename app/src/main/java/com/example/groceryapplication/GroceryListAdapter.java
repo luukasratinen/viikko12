@@ -1,6 +1,8 @@
 package com.example.groceryapplication;
 
 import android.content.Context;
+
+import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -17,6 +19,7 @@ public class GroceryListAdapter extends RecyclerView.Adapter<GroceryViewHolder> 
         this.groceries = groceries;
     }
 
+    @NonNull
     @Override
     public GroceryViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
         View view = LayoutInflater.from(context).inflate(R.layout.grocery_view, parent, false);
@@ -35,9 +38,5 @@ public class GroceryListAdapter extends RecyclerView.Adapter<GroceryViewHolder> 
         return groceries.size();
     }
 
-    public void updateGroceryList(ArrayList<Grocery> updatedList) {
-        groceries.clear();
-        groceries.addAll(updatedList);
-        notifyDataSetChanged();
-    }
+
 }
