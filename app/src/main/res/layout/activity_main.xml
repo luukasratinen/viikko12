@@ -5,6 +5,7 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#00272323"
     tools:context=".MainActivity">
 
     <Button
@@ -37,18 +38,10 @@
         android:id="@+id/frame"
         android:layout_width="0dp"
         android:layout_height="0dp"
+        android:background="#0323F4"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button2">
-
-        <androidx.recyclerview.widget.RecyclerView
-            android:id="@+id/rvGroceries"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:background="#8BC34A" />
-
-
-    </FrameLayout>
+        app:layout_constraintTop_toBottomOf="@+id/button2" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
