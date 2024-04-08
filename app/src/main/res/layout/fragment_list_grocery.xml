@@ -5,7 +5,7 @@
     android:id="@+id/ListGroceryFragment1"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".fragments.ListGroceryFragment">
+    tools:context=".Fragments.ListGroceryFragment">
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/rvGroceries"

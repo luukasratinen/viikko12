@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#03A9F4"
-    tools:context=".fragments.AddGroceryFragment">
+    tools:context=".Fragments.AddGroceryFragment">
 
     <EditText
         android:id="@+id/editGroceryName"
@@ -31,4 +31,10 @@
         android:layout_height="wrap_content"
         android:layout_gravity="bottom|center_horizontal"
         android:text="add item" />
+
+    <CheckBox
+        android:id="@+id/checkImportant"
+        android:layout_width="182dp"
+        android:layout_height="230dp"
+        android:text="Super important" />
 </FrameLayout>
