@@ -25,18 +25,15 @@ public class AddGroceryFragment extends Fragment {
         editGroceryNote = view.findViewById(R.id.editGroceryNote);
         Button buttonAddGrocery = view.findViewById(R.id.buttonAddGrocery);
 
-        buttonAddGrocery.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                String name = editGroceryName.getText().toString();
-                String note = editGroceryNote.getText().toString();
+        buttonAddGrocery.setOnClickListener(v -> {
+            String name = editGroceryName.getText().toString();
+            String note = editGroceryNote.getText().toString();
 
-                MainActivity activity = (MainActivity) getActivity();
-                if (activity != null) {
-                    activity.addGrocery(name, note);
-                    editGroceryName.getText().clear();
-                    editGroceryNote.getText().clear();
-                }
+            MainActivity activity = (MainActivity) getActivity();
+            if (activity != null) {
+                activity.addGrocery(name, note);
+                editGroceryName.getText().clear();
+                editGroceryNote.getText().clear();
             }
         });
 
