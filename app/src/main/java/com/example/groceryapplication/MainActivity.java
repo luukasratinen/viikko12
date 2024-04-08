@@ -20,9 +20,9 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        buttonMainPage = findViewById(R.id.button1);
-        buttonAddItem = findViewById(R.id.button2);
-        buttonAllItems = findViewById(R.id.button3);
+        buttonMainPage = findViewById(R.id.MainPageFragment);
+        buttonAddItem = findViewById(R.id.AddGroceryFragment);
+        buttonAllItems = findViewById(R.id.ListGroceryFragment);
 
         buttonMainPage.setOnClickListener(new View.OnClickListener() {
             @Override

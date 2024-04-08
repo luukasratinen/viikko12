@@ -9,29 +9,29 @@
     tools:context=".MainActivity">
 
     <Button
-        android:id="@+id/button1"
+        android:id="@+id/MainPageFragment"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Main Page"
+        android:text="MAIN PAGE"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
-        android:id="@+id/button2"
+        android:id="@+id/AddGroceryFragment"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
-        android:text="Add Item"
-        app:layout_constraintStart_toEndOf="@+id/button1"
+        android:text="ADD ITEM"
+        app:layout_constraintStart_toEndOf="@+id/MainPageFragment"
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
-        android:id="@+id/button3"
+        android:id="@+id/ListGroceryFragment"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="All Items"
+        android:text="ALL ITEMS"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/button2"
+        app:layout_constraintStart_toEndOf="@+id/AddGroceryFragment"
         app:layout_constraintTop_toTopOf="parent" />
 
     <FrameLayout
@@ -42,6 +42,6 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button2" />
+        app:layout_constraintTop_toBottomOf="@+id/AddGroceryFragment" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
