@@ -2,8 +2,8 @@ package com.example.groceryapplication;
 
 public class Grocery {
 
-    private String name;
-    private String note;
+    private final String name;
+    private final String note;
 
     public Grocery(String name, String note) {
         this.name = name;

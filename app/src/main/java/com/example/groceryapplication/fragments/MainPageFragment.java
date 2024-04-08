@@ -1,4 +1,4 @@
-package com.example.groceryapplication.Fragments;
+package com.example.groceryapplication.fragments;
 import android.os.Bundle;
 import androidx.fragment.app.Fragment;
 import android.view.LayoutInflater;
@@ -8,11 +8,9 @@ import com.example.groceryapplication.R;
 
 public class MainPageFragment extends Fragment {
 
-    public MainPageFragment() {
-
-
+    public void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
     }
-
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,

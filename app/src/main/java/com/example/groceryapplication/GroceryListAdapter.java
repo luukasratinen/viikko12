@@ -11,8 +11,8 @@ import java.util.ArrayList;
 
 public class GroceryListAdapter extends RecyclerView.Adapter<GroceryViewHolder> {
 
-    private Context context;
-    private ArrayList<Grocery> groceries;
+    private final Context context;
+    private final ArrayList<Grocery> groceries;
 
     public GroceryListAdapter(Context context, ArrayList<Grocery> groceries) {
         this.context = context;
@@ -21,7 +21,7 @@ public class GroceryListAdapter extends RecyclerView.Adapter<GroceryViewHolder> 
 
     @NonNull
     @Override
-    public GroceryViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
+    public GroceryViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         View view = LayoutInflater.from(context).inflate(R.layout.grocery_view, parent, false);
         return new GroceryViewHolder(view);
     }

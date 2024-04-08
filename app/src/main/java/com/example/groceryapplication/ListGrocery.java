@@ -5,7 +5,7 @@ import java.util.ArrayList;
 public class ListGrocery {
 
     private static ListGrocery instance;
-    private ArrayList<Grocery> groceries;
+    private final ArrayList<Grocery> groceries;
 
     private ListGrocery() {
         groceries = new ArrayList<>();

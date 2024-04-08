@@ -5,9 +5,9 @@ import androidx.fragment.app.Fragment;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
-import com.example.groceryapplication.Fragments.AddGroceryFragment;
-import com.example.groceryapplication.Fragments.MainPageFragment;
-import com.example.groceryapplication.Fragments.ListGroceryFragment;
+import com.example.groceryapplication.fragments.AddGroceryFragment;
+import com.example.groceryapplication.fragments.MainPageFragment;
+import com.example.groceryapplication.fragments.ListGroceryFragment;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -26,25 +26,20 @@ public class MainActivity extends AppCompatActivity {
         fragmentC.setOnClickListener(listener);
     }
 
-    private View.OnClickListener listener = new View.OnClickListener() {
-        @Override
-        public void onClick(View view) {
-            Fragment fragment;
+    private final View.OnClickListener listener = (View view) -> {
+        Fragment fragment;
 
-            if (view.getId() == R.id.MainPageFragment) {
-                fragment = new MainPageFragment();
-            } else if (view.getId() == R.id.AddGroceryFragment) {
-                fragment = new AddGroceryFragment();
-            } else if (view.getId() == R.id.ListGroceryFragment) {
-                fragment = new ListGroceryFragment();
-            } else {
-                fragment = new MainPageFragment();
-            }
-
-            getSupportFragmentManager().beginTransaction()
-                    .replace(R.id.nakyma, fragment)
-                    .commit();
+        if (view.getId() == R.id.MainPageFragment) {
+            fragment = new MainPageFragment();
+        } else if (view.getId() == R.id.AddGroceryFragment) {
+            fragment = new AddGroceryFragment();
+        } else {
+            fragment = new ListGroceryFragment();
         }
+
+        getSupportFragmentManager().beginTransaction()
+                .replace(R.id.nakyma, fragment)
+                .commit();
     };
 
     public void addGrocery(String name, String note) {
